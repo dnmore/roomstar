@@ -1,0 +1,132 @@
+html {
+  --color-1: #ffffff;
+  --color-2: #ff729f;
+  --color-3: #111344;
+  --color-4: #f25c54;
+}
+
+body {
+  margin: 0;
+  font-family: "Anek Malayalam", sans-serif;
+  background-color: var(--color-3);
+  font-size: 1rem;
+  color: var(--color-1);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+strong {
+  color: var(--color-4);
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+#logo {
+  background-color: var(--color-1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 10rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+#logo a {
+  text-decoration: none;
+  color: var(--color-4);
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: bold;
+ 
+}
+
+#logo a:active,
+#logo a:hover {
+  color: var(--color-3);
+}
+
+#nav-links li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: var(--color-4);
+}
+
+#nav-links a:active,
+#nav-links a:hover {
+  color: var(--color-1);
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.btn {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--color-4);
+  border: transparent;
+  font-family: "Anek Malayalam", sans-serif;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.btn:active,
+.btn:hover {
+  background-color: var(--color-2);
+}
+
+.btn a {
+  text-decoration: none;
+  color: var(--color-1);
+  font-size: 1rem;
+}
+
+
+
+@media (min-width: 48rem) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  #logo {
+    width: 20rem;
+  }
+  #logo a {
+    font-size: 2rem;
+  }
+  #nav-links {
+    display: flex;
+  }
+  #nav-links li {
+    margin: 1.5rem;
+  }
+  #nav-links a {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 8rem;
+    margin-right: 1rem;
+  }
+
+  .btn a {
+    font-size: 1.5rem;
+  }
+}

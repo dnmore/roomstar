@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head') %>
+    <link rel="stylesheet" href="styles/hotels.css" />
+  </head>
+  <body>
+    <%- include('includes/header') %>
+
+    <main>
+      <h1>Recommended Hotels</h1>
+      <% if (numberHotels === 0){ %>
+        <p>Unfortunately we have no hotels yet, would you start recommending one?</p>
+        <% } else { %>
+      <p>Browse recommendations of other users!</p>
+
+      <ul id="hotels-list">
+        <% for (const hotel of hotels){ %>
+        <section>
+          <li class="hotel-item">
+            <h2><%= hotel.name %></h2>
+            <p><%= hotel.address %></p>
+            <p><%= hotel.description %></p>
+            <a href="<%= hotel.website %>">View Website</a>
+          </li>
+        </section>
+        <% } %>
+      </ul>
+      <% } %>
+    </main>
+  </body>
+</html>

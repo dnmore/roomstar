@@ -1,0 +1,65 @@
+form {
+    width: 20rem;
+    border: 0.5px solid var(--color-1);
+    padding: 1rem 0;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+  }
+  
+  .form-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font: inherit;
+    font-size: 1rem;
+  }
+  
+  input,
+  textarea {
+    font: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: var(--color-1);
+    background-color: var(--color-3);
+    border: 0.5px solid var(--color-1);
+    border-radius: 2px;
+    width: 80%;
+    cursor: pointer;
+  }
+  
+  input:focus,
+  textarea:focus {
+    background-color: var(--color-1);
+    border: transparent;
+    color: var(--color-3);
+  }
+  
+  #share {
+    color: var(--color-1);
+    font-size: 1rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2px;
+  }
+  
+  @media (min-width: 48rem) {
+    form {
+      width: 50rem;
+    }
+  
+    input,
+    textarea {
+      width: 50%;
+    }
+  
+    label,
+    input,
+    textarea,
+    #share {
+      font-size: 1.5rem;
+    }
+  }
+  
