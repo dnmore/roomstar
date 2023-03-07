@@ -26,43 +26,33 @@ p {
 }
 
 #logo {
-  background-color: var(--color-1);
+  background-color: var(--color-4);
+  color: var(--color-1);
   border-radius: 50%;
   box-sizing: border-box;
   width: 10rem;
   text-align: center;
   margin: 2rem;
+  font-size: 1.3rem;
+}
+.navbar-nav {
+  --bs-nav-link-hover-color:var(--color-1);
 }
 
-#logo a {
-  text-decoration: none;
+.nav-link {
   color: var(--color-4);
-  font-size: 1.5rem;
-  padding: 1rem;
-  font-weight: bold;
- 
+  font-size: 1.3rem;
+  margin: 0 2rem;
 }
 
-#logo a:active,
-#logo a:hover {
-  color: var(--color-3);
+.navbar-toggler {
+  background-color: var(--color-4);
+  border: transparent;
 }
 
-#nav-links li {
-  list-style: none;
-  margin-bottom: 0.5rem;
+.navbar-toggler:focus {
+  box-shadow: none;
 }
-
-#nav-links a {
-  text-decoration: none;
-  color: var(--color-4);
-}
-
-#nav-links a:active,
-#nav-links a:hover {
-  color: var(--color-1);
-}
-
 main {
   width: 60%;
   margin: 0 auto;
@@ -94,30 +84,10 @@ main {
 
 
 @media (min-width: 48rem) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   h1 {
     font-size: 3rem;
   }
   p {
-    font-size: 1.5rem;
-  }
-  #logo {
-    width: 20rem;
-  }
-  #logo a {
-    font-size: 2rem;
-  }
-  #nav-links {
-    display: flex;
-  }
-  #nav-links li {
-    margin: 1.5rem;
-  }
-  #nav-links a {
     font-size: 1.5rem;
   }
 
