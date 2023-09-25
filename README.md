@@ -5,19 +5,6 @@ Looking for an Hotel or just found one Amazing? In The Room allows you to share 
 ### Screenshot
 ![Full preview of the front page](/hotel-reviews.png)
 
-## Quick start
-### Install dependencies:
-
-* npm install express
-* npm install ejs
-* npm install --save –dev nodemon
-* npm start
-
-### Browse: 
-
-http://localhost:3000/
-
-
 ## License
 MIT
 
