@@ -10,21 +10,16 @@
     <main>
       <h1>Recommended Hotels</h1>
       <% if (numberHotels === 0){ %>
-        <p>Unfortunately we have no hotels yet, would you start recommending one?</p>
-        <button class="btn"><a href="/recommend">Share</a></button>
-        <% } else { %>
+      <p>
+        Unfortunately we have no hotels yet, would you start recommending one?
+      </p>
+      <button class="btn"><a href="/recommend">Share</a></button>
+      <% } else { %>
       <p>Browse recommendations of other users!</p>
 
       <ul id="hotels-list">
-        <% for (const hotel of hotels){ %>
-        <section>
-          <li class="hotel-item">
-            <h2><%= hotel.name %></h2>
-            <p><%= hotel.address %></p>
-            <p><%= hotel.description %></p>
-            <a href="<%= hotel.website %>">View Website</a>
-          </li>
-        </section>
+        <% for (const hotel of hotels){ %> 
+        <%- include('includes/hotel-item', {hotel: hotel}) %> 
         <% } %>
       </ul>
       <% } %>

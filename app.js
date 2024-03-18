@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
+const uuid = require("uuid");
 
 const app = express();
 
@@ -26,12 +27,29 @@ app.get("/hotels", function (req, res) {
   });
 });
 
+app.get("/hotels/:id", function (req, res) {
+  const hotelId = req.params.id;
+  const filePath = path.join(__dirname, "data", "hotels.json");
+
+  const fileData = fs.readFileSync(filePath);
+  const storedHotels = JSON.parse(fileData);
+
+  for (const hotel of storedHotels) {
+    if (hotel.id === hotelId) {
+      return res.render("hotel-detail", { hotel: hotel });
+    }
+  }
+
+  res.render("404");
+});
+
 app.get("/recommend", function (req, res) {
   res.render("recommend");
 });
 
 app.post("/recommend", function (req, res) {
   const hotel = req.body;
+  hotel.id = uuid.v4();
   const filePath = path.join(__dirname, "data", "hotels.json");
 
   const fileData = fs.readFileSync(filePath);
@@ -50,6 +68,14 @@ app.get("/confirm", function (req, res) {
 
 app.get("/about", function (req, res) {
   res.render("about");
+});
+
+app.use(function (req, res) {
+  res.render("404");
+});
+
+app.use(function (error, req, res, next) {
+  res.render("500");
 });
 
 app.listen(3000);
