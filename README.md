@@ -12,10 +12,11 @@ Hotel Reviews App where users can
 * EJS
 * uuid
 
-## Preview
-![Full preview of the front page](/preview.png)
+### Preview
+![Full preview of the front page](/preview.PNG)
 
-
+## License
+MIT
 
 
 
