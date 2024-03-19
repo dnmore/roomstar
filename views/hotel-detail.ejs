@@ -2,22 +2,22 @@
 <html lang="en">
   <head>
     <%- include('includes/head') %>
-    <link rel="stylesheet" href="/public/styles/hotels.css" />
+    <link rel="stylesheet" href="/styles/hotels.css" />
   </head>
   <body>
     <%- include('includes/header') %>
 
     <main>
-      <section class="hotel-item">
+      <div class="hotel__detail">
        
           <h3><%= hotel.name %></h3>
           <p><%= hotel.address %></p>
           <p><%= hotel.title %></p>
-          <p><%= hotel.description %></p>
-          <p><%= hotel.rating %></p>
+          <p class="description"><%= hotel.description %></p>
+          <p>Rating: <%= hotel.rating %></p>
           <a href="<%= hotel.website %>">View Website</a>
         
-      </section>
+      </div>
     </main>
   </body>
 </html>

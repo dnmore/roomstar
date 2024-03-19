@@ -2,19 +2,31 @@
 <html lang="en">
   <head>
     <%- include('includes/head') %>
+    <link rel="stylesheet" href="styles/hotels.css" />
   </head>
   <body>
-    
-      <%- include('includes/header') %>
-    
+    <%- include('includes/header') %>
+
     <main>
-      <h1>
-        Looking for an <strong>Hotel</strong> or just found one
-        <strong>Amazing </strong> ?
-      </h1>
-      <p>Share your favorite Hotel or Browse recommendations of other users!</p>
-      <button class="btn"><a href="/hotels">Browse</a></button>
-      <button class="btn"><a href="/recommend">Share</a></button>
+      <div class="intro">
+        <div class="card__image">
+          <img
+            src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWx8ZW58MHx8MHx8fDA%3D"
+            alt="gray lamp near a bed"
+          />
+        </div>
+        <div class="card__content">
+          <h1>
+            Looking for an <strong>Hotel</strong> or just found one
+            <strong>Amazing </strong>?
+          </h1>
+          <p>
+            Share your favorite Hotel or Browse recommendations of other users!
+          </p>
+          <button><a href="/hotels">Browse</a></button>
+          <button><a href="/recommend">Share</a></button>
+        </div>
+      </div>
     </main>
   </body>
 </html>

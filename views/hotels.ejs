@@ -8,20 +8,22 @@
     <%- include('includes/header') %>
 
     <main>
-      <h1>Recommended Hotels</h1>
-      <% if (numberHotels === 0){ %>
-      <p>
-        Unfortunately we have no hotels yet, would you start recommending one?
-      </p>
-      <button class="btn"><a href="/recommend">Share</a></button>
-      <% } else { %>
-      <p>Browse recommendations of other users!</p>
+      <h2>Recommended Hotels</h2>
+      <section>
+        <% if (numberHotels === 0){ %>
+        <p>
+          Unfortunately we have no hotels yet, would you start recommending one?
+        </p>
+        <button><a href="/recommend">Share</a></button>
+      </section>
 
-      <ul id="hotels-list">
-        <% for (const hotel of hotels){ %> 
-        <%- include('includes/hotel-item', {hotel: hotel}) %> 
-        <% } %>
-      </ul>
+      <% } else { %>
+      <p>Browse Recommendations of Other Users!</p>
+
+      <div class="hotels__list">
+        <% for (const hotel of hotels){ %> <%- include('includes/hotel-item',
+        {hotel: hotel}) %> <% } %>
+      </div>
       <% } %>
     </main>
   </body>

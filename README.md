@@ -1,12 +1,21 @@
-# In The Room
+# RoomStar
 
-Looking for an Hotel or just found one Amazing? In The Room allows you to share reviews with no need to sign up or create any account as they will be automatically displayed in the browse/ recommended section.
+Hotel Reviews App where users can 
 
-### Screenshot
-![Full preview of the front page](/hotel-reviews.png)
+* browse hotel recommendations of other users
+* browse the full review and details of the recommended hotels
+* add review of a recommended hotel  
 
-## License
-MIT
+## Stack
+
+* JavaScript
+* EJS
+* uuid
+
+## Preview
+![Full preview of the front page](/preview.png)
+
+
 
 
 

@@ -1,102 +1,155 @@
-html {
-  --color-1: #ffffff;
-  --color-2: #ff729f;
-  --color-3: #111344;
-  --color-4: #f25c54;
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --primary-dark: #30302f;
+  --primary-light: #f7f7f5;
+  --accent-green-40: #0fd28a;
+  --accent-green-30: #00aa6c;
+  --purple-90: #f2ecf9;
 }
 
 body {
   margin: 0;
-  font-family: "Anek Malayalam", sans-serif;
-  background-color: var(--color-3);
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
   font-size: 1rem;
-  color: var(--color-1);
+  text-align: center;
+  line-height: 1.6;
+}
+
+main {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+a:hover {
+  opacity: 0.8;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
-strong {
-  color: var(--color-4);
-}
-
-p {
-  margin-bottom: 2rem;
-}
-
-#logo {
-  background-color: var(--color-4);
-  color: var(--color-1);
-  border-radius: 50%;
-  box-sizing: border-box;
-  width: 8rem;
-  text-align: center;
-  margin: 2rem;
+h2 {
   font-size: 1.3rem;
 }
-.navbar-nav {
-  --bs-nav-link-hover-color:var(--color-1);
+
+h3 {
+  font-size: 1.2rem;
 }
 
-.nav-link {
-  color: var(--color-4);
-  font-size: 1.3rem;
-  margin: 0 2rem;
+section {
+  width: 100%;
+  padding: 5% 0;
+  margin: 2rem auto;
 }
 
-.navbar-toggler {
-  background-color: var(--color-4);
+button {
+  padding: 10px 16px;
+  border-radius: 20px;
   border: transparent;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-main {
-  width: 60%;
-  margin: 0 auto;
-  padding-top: 2rem;
-  text-align: center;
-}
-
-.btn {
-  width: 5rem;
-  height: 5rem;
-  background-color: var(--color-4);
-  border: transparent;
-  font-family: "Anek Malayalam", sans-serif;
-  margin-bottom: 2rem;
+  background-color: var(--accent-green-30);
+  transition: background-color 1s linear;
+  font: inherit;
   cursor: pointer;
 }
 
-.btn:active,
-.btn:hover {
-  background-color: var(--color-2);
+button a {
+  color: var(--primary-light);
 }
 
-.btn a {
-  text-decoration: none;
-  color: var(--color-1);
-  font-size: 1rem;
+button:hover {
+  background-color: var(--accent-green-40);
 }
 
+.main__header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--purple-90);
+}
 
+.main__header nav {
+  display: none;
+}
+
+.logo {
+  margin-left: 1rem;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#hamburger__button {
+  width: 2rem;
+  height: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+#hamburger__button span {
+  width: 100%;
+  height: 5px;
+  margin: 5px auto;
+  background-color: #000;
+}
+
+#mobile__menu {
+  display: none;
+}
+
+#mobile__menu.open {
+  display: block;
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-color: var(--purple-90);
+  padding: 5% 0;
+}
+
+#mobile__menu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mobile__menu a {
+  font-size: 1.2rem;
+  margin: 2rem auto;
+}
 
 @media (min-width: 48rem) {
-  h1 {
-    font-size: 3rem;
-  }
-  p {
-    font-size: 1.5rem;
+  #hamburger__button {
+    display: none;
   }
 
-  .btn {
-    width: 8rem;
-    margin-right: 1rem;
+  .main__header nav {
+    display: block;
   }
 
-  .btn a {
-    font-size: 1.5rem;
+  .main__header a {
+    margin: 0 2rem;
+  }
+
+  #mobile__menu.open {
+    display: none;
   }
 }
