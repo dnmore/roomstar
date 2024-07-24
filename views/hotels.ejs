@@ -8,14 +8,14 @@
     <%- include('includes/header') %>
 
     <main>
-      <h2>Recommended Hotels</h2>
-      <section>
+      <div class="hotels__list__overview">
+        <h2>Recommended Hotels</h2>
         <% if (numberHotels === 0){ %>
         <p>
           Unfortunately we have no hotels yet, would you start recommending one?
         </p>
         <button><a href="/recommend">Share</a></button>
-      </section>
+      
 
       <% } else { %>
       <p>Browse Recommendations of Other Users!</p>
@@ -25,6 +25,8 @@
         {hotel: hotel}) %> <% } %>
       </div>
       <% } %>
+      </div>
+        
     </main>
   </body>
 </html>

@@ -1,6 +1,10 @@
 form {
-  width: 50%;
-  margin: auto;
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 10% 5%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
 }
 
 button {
@@ -8,25 +12,33 @@ button {
 }
 
 .form__item {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 label {
   margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
 }
 
 input {
   font: inherit;
-  padding: 8px 5px;
+  padding: 8px;
+
   border: 1px solid #b4b5b8;
   border-radius: 8px;
 }
 
 textarea {
   font: inherit;
-  height: 100px;
+  line-height: 1.2;
+
+  padding: 8px;
+
   resize: none;
   border: 1px solid #b4b5b8;
   border-radius: 8px;
@@ -34,8 +46,9 @@ textarea {
 
 select {
   font: inherit;
-  margin: 0 10px;
-  width: 40px;
+  padding: 5px;
+  max-width: 50px;
+
   border: 1px solid #b4b5b8;
   border-radius: 8px;
   cursor: pointer;
@@ -53,7 +66,6 @@ select:focus {
 
 @media (min-width: 48rem) {
   form {
-    width: 30%;
-    margin: auto;
+    padding-top: 10%;
   }
 }

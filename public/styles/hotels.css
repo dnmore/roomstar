@@ -4,16 +4,12 @@ strong {
 
 .intro {
   width: 100%;
-  padding: 5% 0;
-  margin: 2rem auto;
+  padding-top: 20%;
+  margin: 3rem auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-.card__image {
-  max-width: 300px;
 }
 
 .card__image img {
@@ -25,43 +21,76 @@ strong {
 .card__content {
   padding: 5%;
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotels__list__overview {
+  width: 100%;
+  padding-top: 20%;
+  margin: 3rem auto;
+  text-align: center;
 }
 
 .hotels__list {
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .hotel__item {
   width: 200px;
-  background-color: var(--purple-90);
-  border: transparent;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-light);
+  border: 1px solid var(--primary-gray);
   margin: 20px auto;
-  padding: 10px;
- 
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.hotel__item h3 {
-text-transform: capitalize;
+.hotel__item:hover {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-.hotel__item a {
-  color: var(--accent-green-30);
+.hotel__heading {
+  text-transform: capitalize;
+  background-color: var(--primary-gray);
+}
+
+.hotel__content {
+  padding-bottom: 20px;
+}
+
+.title {
+  font-weight: bold;
+  margin: 0 auto;
 }
 
 .hotel__detail {
   max-width: 500px;
-  background-color: var(--purple-90);
-  border: transparent;
-  margin: 20px auto;
-  padding: 10px;
- 
+  padding: 10%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
-
 
 .description {
   text-align: justify;
+}
+
+@media (min-width: 48rem) {
+  .hotel__detail {
+    padding: 10px;
+  }
+
+  .intro {
+    padding-top: 5%;
+  }
+  .hotels__list__overview {
+    padding-top: 5%;
+  }
 }

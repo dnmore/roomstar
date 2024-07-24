@@ -8,30 +8,30 @@
   <body>
     <%- include('includes/header') %>
     <main>
-      <h1>Share Hotel</h1>
+      
       <form action="/recommend" method="post">
         <div class="form__item">
-          <label for="name">Hotel Name</label>
+          <label for="name">Which is the hotel name?</label>
           <input type="text" id="name" name="name" required />
         </div>
 
         <div class="form__item">
-          <label for="address">Location</label>
-          <input type="text" id="address" name="address" required />
+          <label for="address">Where is the hotel located?</label>
+          <input type="text" id="address" name="address" placeholder="Type address here" required />
         </div>
 
         <div class="form__item">
-          <label for="title">Review Title</label>
-          <input type="text" id="title" name="title" required />
+          <label for="title">Title your review</label>
+          <input type="text" id="title" name="title" placeholder="Give us the gist of your experience" required />
         </div>
 
         <div class="form__item">
-          <label for="description">Review Description</label>
-          <textarea name="description" id="description" rows="5"></textarea>
+          <label for="description">Write your review</label>
+          <textarea name="description" id="description" rows="5" placeholder="Excellent location and wondeful service. We took so many photos!..."></textarea>
         </div>
 
-        <div class="form-item">
-          <label for="rating">Rating</label>
+        <div class="form__item">
+          <label for="rating">How would you rate your experience?</label>
           <select id="rating" name="rating">
             <option>1</option>
             <option>2</option>
@@ -45,7 +45,7 @@
           <input type="url" id="website" name="website" />
         </div>
 
-        <button>Share</button>
+        <button>Share review</button>
       </form>
     </main>
   </body>

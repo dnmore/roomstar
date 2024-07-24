@@ -8,16 +8,20 @@
     <%- include('includes/header') %>
 
     <main>
-      <div class="hotel__detail">
-       
+      <section>
+        <div class="hotel__detail">
           <h3><%= hotel.name %></h3>
+          <p>Rating: <%= hotel.rating %></p>
+
           <p><%= hotel.address %></p>
           <p><%= hotel.title %></p>
           <p class="description"><%= hotel.description %></p>
-          <p>Rating: <%= hotel.rating %></p>
-          <a href="<%= hotel.website %>">View Website</a>
-        
-      </div>
+
+          <button>
+            <a href="<%= hotel.website %>">Visit Website</a>
+          </button>
+        </div>
+      </section>
     </main>
   </body>
 </html>

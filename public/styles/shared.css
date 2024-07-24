@@ -4,10 +4,12 @@
   box-sizing: border-box;
 
   --primary-dark: #30302f;
-  --primary-light: #f7f7f5;
+  --primary-light: #ffff;
   --accent-green-40: #0fd28a;
   --accent-green-30: #00aa6c;
   --purple-90: #f2ecf9;
+  --primary-gray: #edebeb;
+  --accent-orange: #db9002;
 }
 
 body {
@@ -16,12 +18,10 @@ body {
   color: var(--primary-dark);
   background-color: var(--primary-light);
   font-size: 1rem;
-  text-align: center;
-  line-height: 1.6;
+  z-index: 0;
 }
 
 main {
-  width: 80%;
   margin: 1rem auto;
 }
 
@@ -46,6 +46,11 @@ h3 {
   font-size: 1.2rem;
 }
 
+p,
+a {
+  font-size: 1rem;
+}
+
 section {
   width: 100%;
   padding: 5% 0;
@@ -53,12 +58,14 @@ section {
 }
 
 button {
-  padding: 10px 16px;
-  border-radius: 20px;
+  padding: 10px 24px;
+  border-radius: 28px;
+  margin-top: 20px;
   border: transparent;
   background-color: var(--accent-green-30);
   transition: background-color 1s linear;
   font: inherit;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -73,14 +80,23 @@ button:hover {
 .main__header {
   width: 100%;
   height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--purple-90);
+  background-color: var(--primary-light);
+  box-shadow: 1px 1px 4px rgba(0, 1, 0, 0.2);
+  z-index: 1000;
 }
 
 .main__header nav {
   display: none;
+}
+
+.main__header nav a:hover {
+  border-bottom: 2px solid var(--accent-green-30);
 }
 
 .logo {
@@ -90,6 +106,10 @@ button:hover {
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.logo strong {
+  color: var(--accent-green-30);
 }
 
 #hamburger__button {
@@ -110,18 +130,18 @@ button:hover {
 }
 
 #mobile__menu {
-  display: none;
+  display: block;
+  position: fixed;
+  top: -120vh;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-light);
+  transition: all ease-in-out 1.2s;
 }
 
 #mobile__menu.open {
-  display: block;
-  position: fixed;
   top: 5rem;
-  left: 0;
-  width: 100%;
   height: calc(100vh - 5rem);
-  background-color: var(--purple-90);
-  padding: 5% 0;
 }
 
 #mobile__menu nav {
@@ -134,6 +154,12 @@ button:hover {
 #mobile__menu a {
   font-size: 1.2rem;
   margin: 2rem auto;
+  border-bottom: 2px solid transparent;
+
+}
+
+#mobile__menu a:hover {
+  border-bottom: 2px solid var(--accent-green-30);
 }
 
 @media (min-width: 48rem) {
