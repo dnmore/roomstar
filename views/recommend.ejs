@@ -8,7 +8,6 @@
   <body>
     <%- include('includes/header') %>
     <main>
-      
       <form action="/recommend" onsubmit="return validateForm()" method="post">
         <div class="form__item">
           <label for="name">Which is the hotel name?</label>
@@ -17,20 +16,36 @@
         </div>
 
         <div class="form__item">
-          <label for="address">Where is the hotel located?</label>
-          <input type="text" id="address" name="address" placeholder="Type address here"  />
-          <span class="error" id="address__error"></span>
+          <label for="state">In which country the hotel is located?</label>
+          <select id="state" name="state">
+            <% for(const country of countries){ %>
+            <option><%= country.name %></option>
+
+            <% } %>
+          </select>
+
+          <span class="error" id="state__error"></span>
         </div>
 
         <div class="form__item">
           <label for="title">Title your review</label>
-          <input type="text" id="title" name="title" placeholder="Give us the gist of your experience" />
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Give us the gist of your experience"
+          />
           <span class="error" id="title__error"></span>
         </div>
 
         <div class="form__item">
           <label for="description">Write your review</label>
-          <textarea name="description" id="description" rows="5" placeholder="Excellent location and wondeful service. We took so many photos!..."></textarea>
+          <textarea
+            name="description"
+            id="description"
+            rows="5"
+            placeholder="Excellent location and wondeful service. We took so many photos!..."
+          ></textarea>
           <span class="min__chars">50 min characters</span>
           <span class="error" id="description__error"></span>
         </div>
@@ -47,7 +62,6 @@
           </select>
           <span class="error" id="rating__error"></span>
         </div>
-        
 
         <button type="submit">Share review</button>
       </form>

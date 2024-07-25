@@ -44,7 +44,11 @@ app.get("/hotels/:id", function (req, res) {
 });
 
 app.get("/recommend", function (req, res) {
-  res.render("recommend");
+  const countryFilePath = path.join(__dirname, "data", "countries.json");
+
+  const countryFileData = fs.readFileSync(countryFilePath);
+  const countries = JSON.parse(countryFileData);
+  res.render("recommend", { countries: countries });
 });
 
 app.post("/recommend", function (req, res) {
