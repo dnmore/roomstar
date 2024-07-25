@@ -155,11 +155,17 @@ button:hover {
   font-size: 1.2rem;
   margin: 2rem auto;
   border-bottom: 2px solid transparent;
-
 }
 
 #mobile__menu a:hover {
   border-bottom: 2px solid var(--accent-green-30);
+}
+
+.message {
+  text-align: center;
+  width: 100%;
+  padding: 5% 0;
+  margin: 4rem auto;
 }
 
 @media (min-width: 48rem) {

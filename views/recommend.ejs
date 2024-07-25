@@ -9,43 +9,47 @@
     <%- include('includes/header') %>
     <main>
       
-      <form action="/recommend" method="post">
+      <form action="/recommend" onsubmit="return validateForm()" method="post">
         <div class="form__item">
           <label for="name">Which is the hotel name?</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" />
+          <span class="error" id="name__error"></span>
         </div>
 
         <div class="form__item">
           <label for="address">Where is the hotel located?</label>
-          <input type="text" id="address" name="address" placeholder="Type address here" required />
+          <input type="text" id="address" name="address" placeholder="Type address here"  />
+          <span class="error" id="address__error"></span>
         </div>
 
         <div class="form__item">
           <label for="title">Title your review</label>
-          <input type="text" id="title" name="title" placeholder="Give us the gist of your experience" required />
+          <input type="text" id="title" name="title" placeholder="Give us the gist of your experience" />
+          <span class="error" id="title__error"></span>
         </div>
 
         <div class="form__item">
           <label for="description">Write your review</label>
           <textarea name="description" id="description" rows="5" placeholder="Excellent location and wondeful service. We took so many photos!..."></textarea>
+          <span class="min__chars">50 min characters</span>
+          <span class="error" id="description__error"></span>
         </div>
 
         <div class="form__item">
           <label for="rating">How would you rate your experience?</label>
           <select id="rating" name="rating">
+            <option></option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
             <option>5</option>
           </select>
+          <span class="error" id="rating__error"></span>
         </div>
-        <div class="form__item">
-          <label for="website">Hotel Website</label>
-          <input type="url" id="website" name="website" />
-        </div>
+        
 
-        <button>Share review</button>
+        <button type="submit">Share review</button>
       </form>
     </main>
   </body>

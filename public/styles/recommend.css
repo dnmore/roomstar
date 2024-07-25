@@ -64,8 +64,21 @@ select:focus {
   outline: none;
 }
 
+.min__chars {
+  font-size: 12px;
+  color: var(--primary-dark);
+  opacity:0.8;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.error {
+  color: #f50545;
+  margin-top: 10px;
+}
+
 @media (min-width: 48rem) {
   form {
-    padding-top: 10%;
+    margin-top: 0;
   }
 }
