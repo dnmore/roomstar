@@ -12,6 +12,15 @@ strong {
   align-items: center;
 }
 
+.card__content {
+  opacity: 0;
+  animation: fade-in 2.5s ease-in-out forwards;
+}
+
+.card__image {
+  animation: slide-right 1.5s ease-in-out forwards;
+}
+
 .card__image img {
   width: 100%;
   height: 100%;
@@ -35,15 +44,14 @@ strong {
 .hotels__list {
   max-width: 600px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
 }
 
 .hotel__item {
   width: 200px;
+  opacity: 0;
   display: flex;
   flex-direction: column;
+  text-align: left;
   background-color: var(--primary-light);
   border: 1px solid var(--primary-gray);
   margin: 20px auto;
@@ -58,23 +66,36 @@ strong {
 .hotel__heading {
   text-transform: capitalize;
   background-color: var(--primary-gray);
+  padding-left: 20px;
 }
 
 .hotel__content {
   padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.hotel__content a {
+  color: var(--accent-green-30);
+}
+
+.hotel__content a:hover {
+  border-bottom: 2px solid var(--accent-green-30);
 }
 
 .title {
   font-weight: bold;
-  margin: 0 auto;
 }
 
 .hotel__detail {
   max-width: 500px;
   padding: 10%;
   margin: 0 auto;
+}
+
+.detail {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .description {
@@ -96,5 +117,35 @@ strong {
   }
   .hotels__list__overview {
     padding-top: 5%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-80vw);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }

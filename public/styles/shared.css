@@ -135,6 +135,7 @@ button:hover {
   top: -120vh;
   left: 0;
   width: 100%;
+   z-index: 80;
   background-color: var(--primary-light);
   transition: all ease-in-out 1.2s;
 }
@@ -142,6 +143,7 @@ button:hover {
 #mobile__menu.open {
   top: 5rem;
   height: calc(100vh - 5rem);
+ 
 }
 
 #mobile__menu nav {
