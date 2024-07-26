@@ -16,11 +16,6 @@ Hotel Reviews application built with Node.js and EJS templating engine.
 - `nodemon` tool automatically restarting the node application when changes are detected
 - `uuid` required for creation of universally unique identifiers
 
-
-
-## Preview
-![Full preview of the front page](/preview.PNG)
-
 ## Cloning
 
 You can [clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) and install the dependencies with the following command
