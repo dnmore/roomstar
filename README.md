@@ -1,41 +1,45 @@
-# Hotel Reviews
+# RoomStar - User-Generated Hotel Reviews Platform
 
-Hotel Reviews application built with Node.js and EJS templating engine.
+## Overview
+
+RoomStar is a web application built with Node.js and EJS where users can share their reviews about hotels and browse reviews shared by others.
 
 ## Features
 
-* browse hotel recommendations of other users
-* browse the full review and details of the recommended hotels
-* add review of a recommended hotel  
+- View hotel recommendations and reviews
+- Browse detailed reviews of hotels
+- Submit your own review for a hotel
 
-## Stack
+## Tech Stack
 
-- `node.js` JavaScript runtime environment
-- `express.js` web framework for node.js
-- `EJS` embedded JavaScript templating
-- `nodemon` tool automatically restarting the node application when changes are detected
-- `uuid` required for creation of universally unique identifiers
+- `Node.js`– JavaScript runtime
+- `Express.js`– Web framework for Node.js
+- `EJS`– Templating engine for server-side rendering
+- `nodemon` – Automatically restarts the server on code changes
+- `UUID`– Unique ID generation for reviews
 
-## Cloning
+## Getting Started
+### Installation
 
-You can [clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) and install the dependencies with the following command
+Clone the repository and install the dependencies:
 
 ```
+$ git clone https://github.com/dnmore/roomstar.git
 $ npm install
 
 ```
-You can run the following command to start the application
+
+### Running the Application
+
+Start the server with:
 
 ```
 $ npm start
 
 ```
 
-The server will be running on port 3000, visit `http://localhost:3000/`
-
+The server will be running on `http://localhost:3000/`
 
 ## License
-MIT
 
-
-
+This project is licensed under the MIT License.
